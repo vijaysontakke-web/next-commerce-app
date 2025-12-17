@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "name": "Victory",
+    "email": "user@nextstore.com",
+    "password": "password",
+    "role": "user",
+    "phone": "+919988998899",
+    "address": {
+      "street": "123, ABC, Saket Nagari",
+      "city": "Nagpur",
+      "zip": "440037",
+      "country": "India"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Admin User",
+    "email": "admin@nextstore.com",
+    "password": "admin123",
+    "role": "admin",
+    "phone": "555-0999",
+    "address": {}
+  },
+  {
+    "name": "Pinner",
+    "email": "pinner@nextstore.com",
+    "password": "password",
+    "role": "user",
+    "id": "r581zb90j",
+    "phone": "+919999998888",
+    "address": {
+      "street": "345, ABC, Saket Nagari",
+      "city": "Nagpur",
+      "zip": "440037",
+      "country": "India"
+    }
+  }
+]
