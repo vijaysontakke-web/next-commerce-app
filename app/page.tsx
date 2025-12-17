@@ -1,9 +1,25 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ProductGrid } from "@/components/features/products/product-grid";
-import { products } from "@/lib/data";
+import { db } from "@/lib/db";
+import { Product } from "@/types";
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  const [dbProducts, dbCategories] = await Promise.all([
+      db.product.findMany(),
+      db.category.findMany()
+  ]);
+
+  const products: Product[] = dbProducts.map(p => {
+      const category = dbCategories.find(c => c.id === p.categoryId) || { id: "unknown", name: "Unknown", slug: "unknown", description: "" };
+      return {
+          ...p,
+          category
+      };
+  });
+
   const featuredProducts = products.slice(0, 4);
 
   return (

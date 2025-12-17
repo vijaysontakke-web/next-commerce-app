@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1",
+    "name": "Wireless Noise-Canceling Headphones",
+    "slug": "wireless-headphones",
+    "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and comfortable over-ear design. Perfect for travel and focus.",
+    "price": 4999,
+    "currency": "INR",
+    "images": [
+      "/images/headphones-1.svg",
+      "/images/headphones-2.svg"
+    ],
+    "categoryId": "1",
+    "inventory": 50,
+    "rating": 4.8,
+    "reviewCount": 124,
+    "features": [
+      "Active Noise Cancellation",
+      "30-hour Battery",
+      "Bluetooth 5.0"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Minimalist Cotton T-Shirt",
+    "slug": "cotton-t-shirt",
+    "description": "A high-quality, breathable cotton t-shirt for everyday wear. Features a relaxed fit and durable stitching.",
+    "price": 999,
+    "currency": "INR",
+    "images": [
+      "/images/tshirt-1.svg"
+    ],
+    "categoryId": "2",
+    "inventory": 100,
+    "rating": 4.5,
+    "reviewCount": 89,
+    "features": [
+      "100% Organic Cotton",
+      "Pre-shrunk",
+      "Unisex Fit"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Smart Watch Series 5",
+    "slug": "smart-watch",
+    "description": "Track your fitness, notifications, and health with the latest Smart Watch. Water-resistant and packed with sensors.",
+    "price": 3299,
+    "currency": "INR",
+    "images": [
+      "/images/watch-1.svg"
+    ],
+    "categoryId": "1",
+    "inventory": 30,
+    "rating": 4.9,
+    "reviewCount": 210,
+    "features": [
+      "Heart Rate Monitor",
+      "GPS",
+      "Water Resistant"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Leather Weekend Bag",
+    "slug": "leather-bag",
+    "description": "Durable leather travel bag with spacious compartments. The perfect companion for short trips.",
+    "price": 1499,
+    "currency": "INR",
+    "images": [
+      "/images/bag-1.svg"
+    ],
+    "categoryId": "3",
+    "inventory": 25,
+    "rating": 4.6,
+    "reviewCount": 67,
+    "features": [
+      "Genuine Leather",
+      "Laptop Compartment",
+      "Adjustable Strap"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Modern Ceramic Vase",
+    "slug": "ceramic-vase",
+    "description": "Elegant ceramic vase with a matte finish. Adds a touch of modern sophistication to any room.",
+    "price": 399,
+    "currency": "INR",
+    "images": [
+      "/images/vase-1.svg"
+    ],
+    "categoryId": "2",
+    "inventory": 15,
+    "rating": 4.7,
+    "reviewCount": 45,
+    "features": [
+      "Handcrafted",
+      "Matte Finish",
+      "10 inches tall"
+    ]
+  },
+  {
+    "name": "Nofuss Men's T-shirt",
+    "slug": "T-shirt",
+    "description": "Nofuss Men's T-shirt in fabric cotton.",
+    "price": 399,
+    "currency": "INR",
+    "categoryId": "0rrs7514d",
+    "inventory": 5,
+    "images": [
+      "/images/tshirt-1.svg"
+    ],
+    "features": [
+      "High Quality",
+      "Smooth and soft",
+      "Durable",
+      "Attractive look"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "id": "r2iqvyelz"
+  }
+]

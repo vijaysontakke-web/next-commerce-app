@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { products } from "@/lib/data";
+import { db } from "@/lib/db";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ShoppingCart, Star, Truck, ShieldCheck } from "lucide-react";
 import { AddToCartButton } from "@/components/features/products/add-to-cart-button";
+import { Product } from "@/types";
 
 interface ProductPageProps {
   params: Promise<{
@@ -13,7 +14,8 @@ interface ProductPageProps {
   }>;
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const products = await db.product.findMany();
   return products.map((product) => ({
     slug: product.slug,
   }));
@@ -21,7 +23,22 @@ export function generateStaticParams() {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = products.find((p) => p.slug === slug);
+  
+  const [dbProduct, dbCategories] = await Promise.all([
+      db.product.findUnique({ where: { slug } }),
+      db.category.findMany()
+  ]);
+
+  if (!dbProduct) {
+    notFound();
+  }
+
+  const category = dbCategories.find(c => c.id === dbProduct.categoryId) || { id: "unknown", name: "Unknown", slug: "unknown", description: "" };
+  
+  const product: Product = {
+      ...dbProduct,
+      category
+  };
 
   if (!product) {
     notFound();

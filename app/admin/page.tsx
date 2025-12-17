@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { RefreshCcw, Truck } from "lucide-react";
+import Link from "next/link";
 import { toast } from "sonner";
 
 interface Order {
@@ -54,10 +55,22 @@ export default function AdminPage() {
             <h1 className="text-3xl font-bold tracking-tight">Admin Dashboard</h1>
             <p className="text-muted-foreground">Manage orders and shipping.</p>
          </div>
-         <Button variant="outline" size="sm" onClick={loadOrders} className="gap-2">
-            <RefreshCcw className="h-4 w-4" /> Refresh
-         </Button>
-      </div>
+          <div className="flex gap-2">
+             <Link href="/admin/products">
+                <Button variant="outline" size="sm" className="gap-2">
+                    Manage Products
+                </Button>
+             </Link>
+             <Link href="/admin/categories">
+                <Button variant="outline" size="sm" className="gap-2">
+                    Manage Categories
+                </Button>
+             </Link>
+             <Button variant="outline" size="sm" onClick={loadOrders} className="gap-2">
+                <RefreshCcw className="h-4 w-4" /> Refresh
+             </Button>
+          </div>
+       </div>
 
       <div className="grid gap-6">
         {/* Simple Stats */}

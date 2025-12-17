@@ -137,7 +137,7 @@ export default function ProfilePage() {
                    <Label htmlFor="phone">Phone Number</Label>
                    <Input 
                       id="phone" 
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 1234567890"
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
                    />
@@ -153,7 +153,7 @@ export default function ProfilePage() {
                       <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input 
                         id="street" 
-                        placeholder="123 Main St"
+                        placeholder="Enter your street address"
                         value={formData.address.street}
                         onChange={(e) => setFormData({...formData, address: {...formData.address, street: e.target.value}})}
                         className="pl-9"
@@ -165,7 +165,7 @@ export default function ProfilePage() {
                       <Label htmlFor="city">City</Label>
                       <Input 
                         id="city" 
-                        placeholder="New York"
+                        placeholder="Enter your city"
                         value={formData.address.city}
                         onChange={(e) => setFormData({...formData, address: {...formData.address, city: e.target.value}})}
                       />
@@ -174,7 +174,7 @@ export default function ProfilePage() {
                       <Label htmlFor="zip">Zip Code</Label>
                       <Input 
                         id="zip" 
-                        placeholder="10001"
+                        placeholder="Enter your zip code"
                         value={formData.address.zip}
                         onChange={(e) => setFormData({...formData, address: {...formData.address, zip: e.target.value}})}
                       />
@@ -184,7 +184,7 @@ export default function ProfilePage() {
                    <Label htmlFor="country">Country</Label>
                    <Input 
                       id="country" 
-                      placeholder="USA"
+                      placeholder="Enter your country"
                       value={formData.address.country}
                       onChange={(e) => setFormData({...formData, address: {...formData.address, country: e.target.value}})}
                    />

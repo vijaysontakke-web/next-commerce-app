@@ -25,12 +25,12 @@ export default function AboutPage() {
           </p>
           <div className="flex gap-4">
              <Link href="/products">
-                <Button size="lg" className="rounded-full px-8">
+                <Button size="lg" className="rounded-full px-8 hover:bg-gray-200 hover:text-primary">
                   Shop Now
                 </Button>
              </Link>
              <Link href="/contact">
-                <Button variant="outline" size="lg" className="rounded-full px-8">
+                <Button variant="outline" size="lg" className="rounded-full px-8 hover:bg-gray-200 hover:text-primary">
                   Contact Us
                 </Button>
              </Link>

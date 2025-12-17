@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Electronics",
+    "description": "Gadgets and devices",
+    "slug": "electronics"
+  },
+  {
+    "id": "2",
+    "name": "Clothing",
+    "description": "Apparel for men and women",
+    "slug": "clothing"
+  },
+  {
+    "id": "3",
+    "name": "Accessories",
+    "description": "Watches, bags, and more",
+    "slug": "accessories"
+  },
+  {
+    "name": "Fashion",
+    "description": "T-Shirts, Kurtas, Blazers",
+    "slug": "fashion",
+    "id": "0rrs7514d"
+  }
+]

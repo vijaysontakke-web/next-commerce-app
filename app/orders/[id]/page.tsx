@@ -118,9 +118,9 @@ export default function OrderPage({ params }: { params: Promise<{ id: string }> 
                         <MapPinIcon className="h-4 w-4" /> Shipping Address
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                        John Doe<br />
-                        123 Main St<br />
-                        New York, 10001
+                        Saket Nagari<br />
+                        123 ABC<br />
+                        Nagpur, 400037
                     </p>
                 </div>
                  <div className="border rounded-lg p-4">

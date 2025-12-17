@@ -65,7 +65,7 @@ export default function RegisterPage() {
                 <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                 <Input 
                   id="name" 
-                  placeholder="John Doe" 
+                  placeholder="Enter your name" 
                   type="text" 
                   className="pl-9"
                   value={name}

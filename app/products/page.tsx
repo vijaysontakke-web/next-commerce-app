@@ -1,7 +1,23 @@
 import { ProductGrid } from "@/components/features/products/product-grid";
-import { products } from "@/lib/data";
+import { db } from "@/lib/db";
+import { Product } from "@/types";
 
-export default function ProductsPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function ProductsPage() {
+  const [dbProducts, dbCategories] = await Promise.all([
+      db.product.findMany(),
+      db.category.findMany()
+  ]);
+
+  const products: Product[] = dbProducts.map(p => {
+      const category = dbCategories.find(c => c.id === p.categoryId) || { id: "unknown", name: "Unknown", slug: "unknown", description: "" };
+      return {
+          ...p,
+          category
+      };
+  });
+
   return (
     <div className="container py-8 md:py-12">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">

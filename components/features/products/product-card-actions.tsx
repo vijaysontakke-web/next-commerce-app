@@ -11,7 +11,7 @@ export function ProductCardActions({ product }: { product: Product }) {
   return (
     <Button 
       size="sm" 
-      className="gap-2" 
+      className="gap-2 hover:bg-gray-200 hover:text-primary hover:rounded" 
       onClick={(e) => {
         e.preventDefault();
         addItem(product);

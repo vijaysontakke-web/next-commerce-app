@@ -32,23 +32,47 @@ export default function Header() {
             <span className="text-xl font-bold tracking-tight">NextStore</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="/products" className="transition-colors hover:text-primary">
+            <Link href="/products" className="transition-colors hover:text-primary hover:bg-gray-200 px-2 py-1 rounded">
               Products
             </Link>
-            <Link href="/orders" className="transition-colors hover:text-primary">
+            <Link href="/orders" className="transition-colors hover:text-primary hover:bg-gray-200 px-2 py-1 rounded">
               Orders
             </Link>
-            <Link href="/about" className="transition-colors hover:text-primary">
+            <Link href="/about" className="transition-colors hover:text-primary hover:bg-gray-200 px-2 py-1 rounded">
               About
+            </Link>
+            <Link href="/contact" className="transition-colors hover:text-primary hover:bg-gray-200 px-2 py-1 rounded">
+              Contact
             </Link>
           </nav>
         </div>
 
         <div className="flex items-center gap-4">
           <div className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-5 w-5" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-48">
+                <DropdownMenuItem asChild>
+                  <Link href="/">Home</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/products">Products</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/orders">Orders</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/about">About</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/contact">Contact</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           
           <Link href="/cart">
@@ -114,7 +138,7 @@ export default function Header() {
              </DropdownMenu>
           ) : (
             <Link href="/login">
-                <Button variant="default" size="sm" className="hidden md:flex">
+                <Button variant="default" size="sm" className="hidden md:flex hover:bg-gray-200 hover:text-primary">
                     <LogIn className="mr-2 h-4 w-4" />
                     Login
                 </Button>

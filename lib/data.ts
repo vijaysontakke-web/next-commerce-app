@@ -55,6 +55,20 @@ export const products: Product[] = [
     },
     {
         id: "4",
+        name: "Leather Weekend Bag",
+        slug: "leather-bag",
+        description: "Durable leather travel bag with spacious compartments. The perfect companion for short trips.",
+        price: 14999,
+        currency: "INR",
+        images: ["/images/bag-1.svg"],
+        category: categories[3],
+        inventory: 25,
+        rating: 4.6,
+        reviewCount: 67,
+        features: ["Genuine Leather", "Laptop Compartment", "Adjustable Strap"]
+    },
+    {
+        id: "5",
         name: "Modern Ceramic Vase",
         slug: "ceramic-vase",
         description: "Elegant ceramic vase with a matte finish. Adds a touch of modern sophistication to any room.",
@@ -67,18 +81,5 @@ export const products: Product[] = [
         reviewCount: 45,
         features: ["Handcrafted", "Matte Finish", "10 inches tall"]
     },
-    {
-        id: "5",
-        name: "Leather Weekend Bag",
-        slug: "leather-bag",
-        description: "Durable leather travel bag with spacious compartments. The perfect companion for short trips.",
-        price: 14999,
-        currency: "INR",
-        images: ["/images/bag-1.svg"],
-        category: categories[3],
-        inventory: 25,
-        rating: 4.6,
-        reviewCount: 67,
-        features: ["Genuine Leather", "Laptop Compartment", "Adjustable Strap"]
-    }
+
 ];

@@ -72,23 +72,23 @@ export default function CheckoutPage() {
                  <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                        <Label htmlFor="firstName">First Name</Label>
-                       <Input id="firstName" required placeholder="John" />
+                       <Input id="firstName" required placeholder="Enter your first name" />
                     </div>
                      <div className="space-y-2">
                        <Label htmlFor="lastName">Last Name</Label>
-                       <Input id="lastName" required placeholder="Doe" />
+                       <Input id="lastName" required placeholder="Enter your last name" />
                     </div>
                     <div className="space-y-2 md:col-span-2">
                        <Label htmlFor="address">Address</Label>
-                       <Input id="address" required placeholder="123 Main St" />
+                       <Input id="address" required placeholder="Enter your address" />
                     </div>
                     <div className="space-y-2">
                        <Label htmlFor="city">City</Label>
-                       <Input id="city" required placeholder="New York" />
+                       <Input id="city" required placeholder="Enter your city" />
                     </div>
                      <div className="space-y-2">
                        <Label htmlFor="zip">Zip Code</Label>
-                       <Input id="zip" required placeholder="10001" />
+                       <Input id="zip" required placeholder="Enter your zip code" />
                     </div>
                  </CardContent>
               </Card>
