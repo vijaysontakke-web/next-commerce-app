@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/auth";
 import { db } from "@/lib/db";
 
 export async function GET(req: Request) {
@@ -20,7 +21,7 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
     try {
-        const session = await auth();
+        const session = await getServerSession(authOptions);
         if (!session || (session.user as any)?.role !== "admin") {
             return new NextResponse("Unauthorized", { status: 403 });
         }
@@ -57,7 +58,7 @@ export async function POST(req: Request) {
 
 export async function PUT(req: Request) {
     try {
-        const session = await auth();
+        const session = await getServerSession(authOptions);
         if (!session || (session.user as any)?.role !== "admin") {
             return new NextResponse("Unauthorized", { status: 403 });
         }
@@ -92,7 +93,7 @@ export async function PUT(req: Request) {
 
 export async function DELETE(req: Request) {
     try {
-        const session = await auth();
+        const session = await getServerSession(authOptions);
         if (!session || (session.user as any)?.role !== "admin") {
             return new NextResponse("Unauthorized", { status: 403 });
         }

@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/auth";
 import { db } from "@/lib/db";
 
 export async function GET(req: Request) {
     try {
-        const session = await auth();
+        const session = await getServerSession(authOptions);
         if (!session || !session.user || !session.user.email) {
             return new NextResponse("Unauthorized", { status: 401 });
         }
@@ -28,7 +29,7 @@ export async function GET(req: Request) {
 
 export async function PUT(req: Request) {
     try {
-        const session = await auth();
+        const session = await getServerSession(authOptions);
         if (!session || !session.user || !session.user.email) {
             return new NextResponse("Unauthorized", { status: 401 });
         }

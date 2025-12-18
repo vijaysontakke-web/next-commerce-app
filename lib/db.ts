@@ -89,7 +89,7 @@ export const db = {
         },
         create: async ({ data }: { data: Omit<User, 'id'> }) => {
             const users = readDb();
-            const newUser = { ...data, id: Math.random().toString(36).substr(2, 9) };
+            const newUser = { ...data, id: Math.random().toString(36).substring(2, 11) };
             users.push(newUser);
             writeDb(users);
             return newUser;
@@ -111,7 +111,7 @@ export const db = {
         },
         create: async ({ data }: { data: Omit<Category, 'id'> }) => {
             const categories = readCategoriesDb();
-            const newCategory = { ...data, id: Math.random().toString(36).substr(2, 9) };
+            const newCategory = { ...data, id: Math.random().toString(36).substring(2, 11) };
             categories.push(newCategory);
             writeCategoriesDb(categories);
             return newCategory;
@@ -145,7 +145,7 @@ export const db = {
         },
         create: async ({ data }: { data: Omit<Product, 'id'> }) => {
             const products = readProductsDb();
-            const newProduct = { ...data, id: Math.random().toString(36).substr(2, 9) };
+            const newProduct = { ...data, id: Math.random().toString(36).substring(2, 11) };
             products.push(newProduct);
             writeProductsDb(products);
             return newProduct;

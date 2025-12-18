@@ -1,7 +1,26 @@
-import { auth } from "@/auth";
+import { withAuth } from "next-auth/middleware";
+import { NextResponse } from "next/server";
 
-export default auth;
+const middleware = withAuth(
+    function middleware(req) {
+        const token = req.nextauth.token;
+        const isAdmin = token?.role === "admin";
+        const isOnAdmin = req.nextUrl.pathname.startsWith("/admin");
+
+        if (isOnAdmin && !isAdmin) {
+            return NextResponse.redirect(new URL("/", req.url));
+        }
+    },
+    {
+        callbacks: {
+            authorized: ({ token }) => !!token,
+        },
+    }
+);
+
+export default middleware;
+export { middleware as proxy };
 
 export const config = {
-    matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+    matcher: ["/admin/:path*", "/orders/:path*"],
 };

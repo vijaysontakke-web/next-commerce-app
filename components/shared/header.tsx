@@ -142,6 +142,9 @@ export default function Header() {
                     <LogIn className="mr-2 h-4 w-4" />
                     Login
                 </Button>
+                <Button variant="default" size="sm" className="flex md:hidden hover:bg-gray-200 hover:text-primary">
+                    <LogIn className="mr-2 h-4 w-4" />
+                </Button>
             </Link>
           )}
         </div>

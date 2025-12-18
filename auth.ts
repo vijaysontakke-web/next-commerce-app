@@ -1,9 +1,9 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { z } from "zod";
 import { db } from "@/lib/db";
 
-export const { handlers, signIn, signOut, auth } = NextAuth({
+export const authOptions: NextAuthOptions = {
     providers: [
         Credentials({
             credentials: {
@@ -11,6 +11,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 password: { label: "Password", type: "password" },
             },
             authorize: async (credentials) => {
+                if (!credentials?.email || !credentials?.password) return null;
+
                 const parsedCredentials = z
                     .object({ email: z.email(), password: z.string().min(6) })
                     .safeParse(credentials);
@@ -31,7 +33,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                             name: user.name,
                             email: user.email,
                             role: user.role,
-                        };
+                        } as any;
                     }
                 }
 
@@ -42,24 +44,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     pages: {
         signIn: "/login",
     },
+    session: {
+        strategy: "jwt",
+    },
     callbacks: {
-        authorized({ auth, request: { nextUrl } }) {
-            const isLoggedIn = !!auth?.user;
-            const isOnAdmin = nextUrl.pathname.startsWith("/admin");
-            const isOnOrders = nextUrl.pathname.startsWith("/orders");
-
-            if (isOnAdmin) {
-                if (isLoggedIn && (auth?.user as any).role === "admin") return true;
-                return false; // Redirect unauthenticated or unauthorized users to login page
-            }
-
-            if (isOnOrders) {
-                if (isLoggedIn) return true;
-                return false; // Redirect unauthenticated users to login page
-            }
-
-            return true;
-        },
         jwt({ token, user }) {
             if (user) {
                 // user is only available on first sign in
@@ -74,4 +62,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             return session;
         },
     },
-});
+};
+
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
