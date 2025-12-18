@@ -20,7 +20,12 @@
     "password": "admin123",
     "role": "admin",
     "phone": "+919999999999",
-    "address": {}
+    "address": {
+      "street": "123, ABC, Gokulpeth",
+      "city": "Nagpur",
+      "zip": "400010",
+      "country": "India"
+    }
   },
   {
     "name": "Pinner",

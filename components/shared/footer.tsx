@@ -9,38 +9,94 @@ export default function Footer() {
             <Link href="/" className="text-xl font-bold tracking-tight">
               NextStore
             </Link>
-            <p className="mt-4 text-sm text-uted-foreground text-gray-500">
+            <p className="mt-4 text-sm text-muted-foreground">
               Premium e-commerce experience built with Next.js and Shadcn UI.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-sm font-semibold">Shop</h3>
-            <ul className="mt-4 space-y-2 text-sm text-gray-500">
-              <li><Link href="/products" className="hover:text-primary">All Products</Link></li>
-              <li><Link href="/categories" className="hover:text-primary">Categories</Link></li>
-              <li><Link href="/deals" className="hover:text-primary">Deals</Link></li>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/products"
+                  className="hover:text-primary transition-colors"
+                >
+                  All Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/categories"
+                  className="hover:text-primary transition-colors"
+                >
+                  Categories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/deals"
+                  className="hover:text-primary transition-colors"
+                >
+                  Deals
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-sm font-semibold">Support</h3>
-             <ul className="mt-4 space-y-2 text-sm text-gray-500">
-              <li><Link href="/contact" className="hover:text-primary">Contact Us</Link></li>
-              <li><Link href="/faq" className="hover:text-primary">FAQs</Link></li>
-              <li><Link href="/shipping" className="hover:text-primary">Shipping Info</Link></li>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="hover:text-primary transition-colors"
+                >
+                  FAQs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/shipping"
+                  className="hover:text-primary transition-colors"
+                >
+                  Shipping Info
+                </Link>
+              </li>
             </ul>
           </div>
-          
-           <div>
+
+          <div>
             <h3 className="text-sm font-semibold">Legal</h3>
-             <ul className="mt-4 space-y-2 text-sm text-gray-500">
-              <li><Link href="/privacy" className="hover:text-primary">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-primary">Terms of Service</Link></li>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-gray-500">
+        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
           © {new Date().getFullYear()} NextStore. All rights reserved.
         </div>
       </div>

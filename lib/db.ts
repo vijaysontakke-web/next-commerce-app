@@ -165,6 +165,16 @@ export const db = {
             const newProducts = products.filter((p) => p.id !== where.id);
             writeProductsDb(newProducts);
             return { success: true };
+        },
+        bulkCreate: async ({ data }: { data: Omit<Product, 'id'>[] }) => {
+            const products = readProductsDb();
+            const newProducts = data.map(item => ({
+                ...item,
+                id: Math.random().toString(36).substring(2, 11)
+            }));
+            const updatedProducts = [...products, ...newProducts];
+            writeProductsDb(updatedProducts);
+            return newProducts;
         }
     }
 };

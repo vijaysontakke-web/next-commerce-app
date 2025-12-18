@@ -120,5 +120,25 @@
     "rating": 0,
     "reviewCount": 0,
     "id": "r2iqvyelz"
+  },
+  {
+    "name": "Modelena watch",
+    "slug": "watch-sapa",
+    "description": "High quality sample product description.",
+    "price": 999,
+    "currency": "INR",
+    "categoryId": "1",
+    "inventory": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+    ],
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "id": "s5vpiriyi"
   }
 ]
