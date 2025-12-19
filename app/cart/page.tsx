@@ -69,7 +69,7 @@ export default function CartPage() {
                         {new Intl.NumberFormat("en-US", {
                           style: "currency",
                           currency: item.currency,
-                        }).format(item.price)}
+                        }).format(item.price * item.quantity)}
                       </p>
                     </div>
 
@@ -161,8 +161,12 @@ export default function CartPage() {
             </CardContent>
             <CardFooter>
               <Link href="/checkout" className="w-full">
-                <Button size="lg" className="w-full font-bold">
-                  Checkout <ArrowRight className="ml-2 h-4 w-4" />
+                <Button
+                  size="lg"
+                  className="w-full font-bold shadow-xl shadow-primary/10 transition-all hover:-translate-y-1 active:scale-95 group"
+                >
+                  Checkout{" "}
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1" />
                 </Button>
               </Link>
             </CardFooter>

@@ -93,12 +93,17 @@ export default function CheckoutPage() {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Create mock order
+      const now = new Date().toISOString();
       const order = {
         id: Math.random().toString(36).substring(2, 9).toUpperCase(),
-        date: new Date().toISOString(),
+        date: now,
         items: items,
         total: cartTotal,
         status: "Processing",
+        statusDates: {
+          placed: now,
+          Processing: now,
+        },
         shipping: {
           name: `${values.firstName} ${values.lastName}`,
           address: values.address,

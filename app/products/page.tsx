@@ -2,38 +2,41 @@ import { ProductGrid } from "@/components/features/products/product-grid";
 import { db } from "@/lib/db";
 import { Product } from "@/types";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export default async function ProductsPage() {
   const [dbProducts, dbCategories] = await Promise.all([
-      db.product.findMany(),
-      db.category.findMany()
+    db.product.findMany(),
+    db.category.findMany(),
   ]);
 
-  const products: Product[] = dbProducts.map(p => {
-      const category = dbCategories.find(c => c.id === p.categoryId) || { id: "unknown", name: "Unknown", slug: "unknown", description: "" };
-      return {
-          ...p,
-          category
-      };
+  const products: Product[] = dbProducts.map((p) => {
+    const category = dbCategories.find((c) => c.id === p.categoryId) || {
+      id: "unknown",
+      name: "Unknown",
+      slug: "unknown",
+      description: "",
+    };
+    return {
+      ...p,
+      category,
+    };
   });
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-8 md:py-12 animate-in fade-in duration-700">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
         <div>
-           <h1 className="text-3xl font-bold tracking-tight">All Products</h1>
-           <p className="text-muted-foreground mt-2">
+          <h1 className="text-3xl font-bold tracking-tight">All Products</h1>
+          <p className="text-muted-foreground mt-2">
             Browse our collection of premium items.
-           </p>
+          </p>
         </div>
-        
+
         {/* Placeholder for future filters/sorting */}
-        <div className="flex gap-2">
-            {/* Filter buttons could go here */}
-        </div>
+        <div className="flex gap-2">{/* Filter buttons could go here */}</div>
       </div>
-      
+
       <ProductGrid products={products} />
     </div>
   );

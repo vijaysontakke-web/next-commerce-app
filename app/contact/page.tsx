@@ -33,12 +33,11 @@ import {
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import { cn } from "@/lib/utils";
 
 const contactSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
   lastName: z.string().min(2, "Last name is required"),
-  email: z.string().email("Invalid email address"),
+  email: z.email("Invalid email address"),
   subject: z.string().min(5, "Subject must be at least 5 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });

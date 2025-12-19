@@ -51,7 +51,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-8 md:py-12 animate-in fade-in duration-700">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {/* Product Images Gallery */}
         <ProductImageGallery images={product.images} name={product.name} />
