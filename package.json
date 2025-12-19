@@ -1,12 +1,30 @@
 {
   "name": "next-commerce-app",
+  "description": "A modern e-commerce application built with Next.js and Shadcn UI",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "Vijay Sontakke",
+  "license": "MIT",
+  "homepage": "https://github.com/vijaysontakke-web/next-commerce-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijaysontakke-web/next-commerce-app.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.js\" \"src/**/*.jsx\"",
+    "prepare": "npm run format",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --no-cache --clear-cache",
+    "test:debug:watch": "node --inspect-brk node_modules/.bin/jest --runInBand --watch --no-cache --clear-cache",
+    "test:debug:coverage": "node --inspect-brk node_modules/.bin/jest --runInBand --coverage --no-cache --clear-cache",
+    "test:debug:watch:coverage": "node --inspect-brk node_modules/.bin/jest --runInBand --watch --coverage --no-cache --clear-cache",
+    "test:debug:watch:coverage:watch": "node --inspect-brk node_modules/.bin/jest --runInBand --watch --coverage --no-cache --clear-cache"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

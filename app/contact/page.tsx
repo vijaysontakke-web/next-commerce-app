@@ -97,7 +97,7 @@ export default function ContactPage() {
   return (
     <div className="container py-12 md:py-20 max-w-7xl animate-in fade-in duration-700">
       <div className="text-center mb-16 space-y-4">
-        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2">
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-5">
           <Globe className="w-4 h-4 mr-2" /> Global Support
         </div>
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl text-foreground">
@@ -213,7 +213,7 @@ export default function ContactPage() {
           <Card className="border-none shadow-2xl overflow-hidden">
             <div className="h-2 bg-primary w-full" />
             <CardHeader className="p-8">
-              <CardTitle className="text-2xl font-bold italic">
+              <CardTitle className="text-2xl font-bold">
                 Drop us a line
               </CardTitle>
               <CardDescription className="text-base">

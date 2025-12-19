@@ -86,7 +86,7 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px] sm:w-[400px]">
                 <SheetHeader>
-                  <SheetTitle className="text-left">Navigation</SheetTitle>
+                  <SheetTitle className="text-left">NextStore</SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-4 py-8">
                   <Link
