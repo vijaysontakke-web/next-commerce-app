@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ShoppingCart, Star, Truck, ShieldCheck } from "lucide-react";
 import { AddToCartButton } from "@/components/features/products/add-to-cart-button";
+import { ProductImageGallery } from "@/components/features/products/product-image-gallery";
 import { Product } from "@/types";
 
 interface ProductPageProps {
@@ -52,35 +53,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="container py-8 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-        {/* Product Images Gallery (Simple Mock) */}
-        <div className="space-y-4">
-          <div className="relative aspect-square overflow-hidden rounded-lg border bg-muted flex items-center justify-center text-muted-foreground">
-            <Image
-              src={product.images[0] || "/placeholder.svg"}
-              alt={product.name}
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-
-          <div className="flex gap-4 overflow-auto pb-2">
-            {product.images.map((img, idx) => (
-              <div
-                key={idx}
-                className="relative aspect-square w-24 flex-none overflow-hidden rounded-md border bg-muted cursor-pointer hover:ring-2 hover:ring-primary"
-              >
-                <Image
-                  src={img}
-                  alt={`View ${idx + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Product Images Gallery */}
+        <ProductImageGallery images={product.images} name={product.name} />
 
         {/* Product Info */}
         <div className="flex flex-col gap-6">

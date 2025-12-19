@@ -7,8 +7,7 @@
     "price": 4999,
     "currency": "INR",
     "images": [
-      "/images/headphones-1.svg",
-      "/images/headphones-2.svg"
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
     ],
     "categoryId": "1",
     "inventory": 50,
@@ -28,7 +27,8 @@
     "price": 999,
     "currency": "INR",
     "images": [
-      "/images/tshirt-1.svg"
+      "https://images.unsplash.com/photo-1516177609387-9bad55a45194",
+      "https://images.unsplash.com/photo-1516442443906-71605254b628"
     ],
     "categoryId": "2",
     "inventory": 100,
@@ -48,7 +48,7 @@
     "price": 3299,
     "currency": "INR",
     "images": [
-      "/images/watch-1.svg"
+      "https://images.unsplash.com/photo-1546868871-7041f2a55e12"
     ],
     "categoryId": "1",
     "inventory": 30,
@@ -68,7 +68,7 @@
     "price": 1499,
     "currency": "INR",
     "images": [
-      "/images/bag-1.svg"
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601"
     ],
     "categoryId": "3",
     "inventory": 25,
@@ -88,7 +88,7 @@
     "price": 399,
     "currency": "INR",
     "images": [
-      "/images/vase-1.svg"
+      "https://images.unsplash.com/photo-1581591524425-c7e0978865fc"
     ],
     "categoryId": "2",
     "inventory": 15,
@@ -109,7 +109,7 @@
     "categoryId": "0rrs7514d",
     "inventory": 5,
     "images": [
-      "/images/tshirt-1.svg"
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820"
     ],
     "features": [
       "High Quality",
@@ -123,7 +123,7 @@
   },
   {
     "name": "Modelena watch",
-    "slug": "watch-sapa",
+    "slug": "hand-watch",
     "description": "High quality sample product description.",
     "price": 999,
     "currency": "INR",
