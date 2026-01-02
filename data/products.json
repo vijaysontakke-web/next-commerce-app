@@ -102,7 +102,7 @@
   },
   {
     "name": "Nofuss Men's T-shirt",
-    "slug": "T-shirt",
+    "slug": "t-shirt",
     "description": "Nofuss Men's T-shirt in fabric cotton.",
     "price": 399,
     "currency": "INR",
@@ -134,8 +134,7 @@
     ],
     "features": [
       "Feature 1",
-      "Feature 2",
-      "Feature 3"
+      "Feature 2"
     ],
     "rating": 0,
     "reviewCount": 0,

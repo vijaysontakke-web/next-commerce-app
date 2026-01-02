@@ -1,0 +1,16 @@
+2025-12-31 13:00:22 [info]: Test Info Log: Initializing system
+2025-12-31 13:00:22 [warn]: Test Warning Log: Something might be wrong
+2025-12-31 13:00:22 [error]: Test Error Log: Critical failure detected
+2025-12-31 13:00:22 [info]: Test Log Entry #0 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #1 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #2 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #3 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #4 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #5 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #6 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #7 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #8 - System verification
+2025-12-31 13:00:22 [info]: Test Log Entry #9 - System verification
+2025-12-31 13:01:24 [info]: User admin@nextstore.com accessing /admin/products
+2025-12-31 13:01:38 [info]: DB: Updated product: s5vpiriyi
+2025-12-31 13:01:38 [info]: [PRODUCTS_PUT] Product updated: s5vpiriyi by admin@nextstore.com

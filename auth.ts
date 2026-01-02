@@ -62,7 +62,20 @@ export const authOptions: NextAuthOptions = {
             return session;
         },
     },
+    events: {
+        async signIn({ user }) {
+            import("@/lib/logger").then((m) => {
+                m.default.info(`User logged in: ${user.email} (ID: ${user.id})`);
+            });
+        },
+        async signOut({ token }) {
+            import("@/lib/logger").then((m) => {
+                m.default.info(`User logged out: ${token.email}`);
+            });
+        },
+    },
 };
+
 
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
