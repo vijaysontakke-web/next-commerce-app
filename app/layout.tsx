@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
+import CodeProtection from "@/components/CodeProtection";
 import { Button } from "@/components/ui/button"; // verify button is installed if needed, but not used directly here
 
 const geistSans = Geist({
@@ -18,7 +19,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NextStore | Premium E-commerce",
-  description: "A modern e-commerce application built with Next.js and Shadcn UI",
+  description:
+    "A modern e-commerce application built with Next.js and Shadcn UI",
 };
 
 import { CartProvider } from "@/lib/cart-context"; // Ensure import
@@ -36,11 +38,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <SessionProvider>
+          <CodeProtection />
           <CartProvider>
             <Header />
-            <main className="flex-1">
-              {children}
-            </main>
+            <main className="flex-1">{children}</main>
             <Footer />
           </CartProvider>
           <Toaster richColors />
