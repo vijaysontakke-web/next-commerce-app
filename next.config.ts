@@ -20,9 +20,11 @@ const nextConfig: NextConfig = {
           {
             rotateStringArray: true,
             stringArray: true,
-            stringArrayThreshold: 0.75,
+            stringArrayThreshold: 0.5, // Reduced from 0.75 for better performance
+            splitStrings: true,
+            stringArrayEncoding: ["base64"], // More efficient than multiple encodings
             debugProtection: true,
-            debugProtectionInterval: 4000,
+            debugProtectionInterval: 10000, // Increased interval to reduce runtime overhead
             disableConsoleOutput: true,
           },
           []

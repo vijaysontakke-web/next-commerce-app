@@ -11,7 +11,7 @@
     "url": "https://github.com/vijaysontakke-web/next-commerce-app.git"
   },
   "scripts": {
-    "dev": "next dev --webpack",
+    "dev": "next dev --turbopack",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",

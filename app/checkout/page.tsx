@@ -163,7 +163,7 @@ export default function CheckoutPage() {
                     <FormItem>
                       <FormLabel>First Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John" {...field} />
+                        <Input placeholder="Enter First Name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -176,7 +176,7 @@ export default function CheckoutPage() {
                     <FormItem>
                       <FormLabel>Last Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Doe" {...field} />
+                        <Input placeholder="Enter Last Name" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -189,10 +189,7 @@ export default function CheckoutPage() {
                     <FormItem className="md:col-span-2">
                       <FormLabel>Full Address</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="123 Shopping St, Apartment 4B"
-                          {...field}
-                        />
+                        <Input placeholder="Enter Full Address" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -205,7 +202,7 @@ export default function CheckoutPage() {
                     <FormItem>
                       <FormLabel>City</FormLabel>
                       <FormControl>
-                        <Input placeholder="New York" {...field} />
+                        <Input placeholder="Enter City" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -218,7 +215,7 @@ export default function CheckoutPage() {
                     <FormItem>
                       <FormLabel>Zip Code</FormLabel>
                       <FormControl>
-                        <Input placeholder="10001" {...field} />
+                        <Input placeholder="Enter Zip Code" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

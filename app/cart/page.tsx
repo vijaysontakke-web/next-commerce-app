@@ -69,7 +69,7 @@ export default function CartPage() {
                         {new Intl.NumberFormat("en-US", {
                           style: "currency",
                           currency: item.currency,
-                        }).format(item.price * item.quantity)}
+                        }).format(item.price)}
                       </p>
                     </div>
 
